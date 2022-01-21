@@ -9,13 +9,13 @@ class Artist extends Model
 {
     use HasFactory;
 
-    private $fillable = [
+    protected $fillable = [
         'firstname',
         'lastname',
     ];
 
-    private $table = 'artists';
+    protected $table = 'artists';
 
-    private $timestamps = false;
+    public $timestamps = false;
 
 }
