@@ -5,26 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Artist extends Model
+class Show extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'firstname',
-        'lastname',
+        'title',
+        'description',
+        'poster_url',
+        'location_id',
+        'bookable',
+        'price',
     ];
 
-    protected $table = 'artists';
+    protected $table = 'shows';
 
     public $timestamps = false;
 
     //Relations
-    public function types() {
-        return $this->belongsToMany(Type::class);
-    }
-
     public function artistTypes() {
-        return $this->hasMany(ArtistType::class);
+        return $this->belongsToMany(ArtistType::class);
     }
-
 }

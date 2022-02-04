@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             ArtistSeeder::class,
             TypeSeeder::class,
             ArtistTypeSeeder::class,
+            ShowSeeder::class,
+            ArtistTypeShowSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }

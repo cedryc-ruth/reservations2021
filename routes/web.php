@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\TypeController;
+use App\Http\Controllers\ShowController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,8 @@ Route::get('type', [TypeController::class,'index'])->name('type.index');
 Route::get('type/{id}', [TypeController::class,'show'])
     ->where('id','[0-9]+')
     ->name('type.show');
+
+Route::get('show', [ShowController::class,'index'])->name('show.index');
+Route::get('show/{id}', [ShowController::class,'show'])
+    ->where('id','[0-9]+')
+    ->name('show.show');
