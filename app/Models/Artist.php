@@ -18,4 +18,9 @@ class Artist extends Model
 
     public $timestamps = false;
 
+    //Relations
+    public function types() {
+        return $this->belongsToMany(Type::class);
+    }
+
 }

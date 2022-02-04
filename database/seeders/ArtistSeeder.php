@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Artist;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 class ArtistSeeder extends Seeder
 {
@@ -16,7 +17,9 @@ class ArtistSeeder extends Seeder
     public function run()
     {
         //Empty the table
+        Schema::disableForeignKeyConstraints();
         Artist::truncate();
+        Schema::enableForeignKeyConstraints();
 
         $artists = [
             [
@@ -41,7 +44,7 @@ class ArtistSeeder extends Seeder
             ],
             [
                 'firstname' => 'Pietro',
-                'lastname' => 'Vassaro',
+                'lastname' => 'Varasso',
             ],
             [
                 'firstname' => 'Laurent',

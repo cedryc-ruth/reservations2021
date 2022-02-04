@@ -25,9 +25,9 @@
         <h3>{{ $artist->firstname }} {{ $artist->lastname }}</h3>
         <p>Bio</p>
         <ul>
-            <li>Comédien</li>
-            <li>Scénographe</li>
-            <li>...</li>
+        @foreach($artist->types as $artisteType)
+          <li>{{ $artisteType->type }}</li>
+        @endforeach
         </ul>
 
         <div class="small secondary expanded button-group">
