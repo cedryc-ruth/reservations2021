@@ -26,7 +26,7 @@
         <p>{{ $show->description }}</p>
         <ul>
         @foreach($show->artistTypes as $artistType)
-          <li>{{ $artistType->artist->firstname }} {{ $artistType->artist->lastname }}</li>
+          <li>{{ $artistType->artist->firstname }} {{ $artistType->artist->lastname }} ({{ $artistType->type->type }})</li>
         @endforeach
         </ul>
       </div>

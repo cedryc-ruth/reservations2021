@@ -36,7 +36,10 @@
           </div>
         </div>
 
-        <nav><a href="{{ route('artist.index') }}">Retour à la liste</a></nav>
+        <nav>
+          <a href="{{ route('artist.edit', $artist->id) }}">Modifier</a>
+          <a href="{{ route('artist.index') }}">Retour à la liste</a>
+        </nav>
     </div>
 
     <div class="column row">

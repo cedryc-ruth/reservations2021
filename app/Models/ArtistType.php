@@ -26,4 +26,8 @@ class ArtistType extends Model
     public function artist() {
         return $this->belongsTo(Artist::class);
     }
+
+    public function type() {
+        return $this->belongsTo(Type::class);
+    }
 }
