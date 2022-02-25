@@ -45,25 +45,4 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('artists', [ArtistController::class,'index'])->name('artist.index');
-Route::get('artists/{id}', [ArtistController::class,'show'])
-    ->where('id','[0-9]+')
-    ->name('artist.show');
-Route::get('artists/{id}/edit', [ArtistController::class,'edit'])
-    ->where('id','[0-9]+')
-    ->name('artist.edit');
-Route::put('artists/{id}', [ArtistController::class,'update'])
-    ->where('id','[0-9]+')
-    ->name('artist.update');
-
-Route::get('types', [TypeController::class,'index'])->name('type.index');
-Route::get('types/{id}', [TypeController::class,'show'])
-    ->where('id','[0-9]+')
-    ->name('type.show');
-
-Route::get('shows', [ShowController::class,'index'])->name('show.index');
-Route::get('shows/{id}', [ShowController::class,'show'])
-    ->where('id','[0-9]+')
-    ->name('show.show');
-
 require __DIR__.'/auth.php';
