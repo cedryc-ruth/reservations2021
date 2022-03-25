@@ -23,6 +23,7 @@
       </div>
       <div class="medium-6 large-5 columns">
         <h3>{{ $show->title }}</h3>
+        <div><strong><a href="{{ route('representation.findByShow',$show->id) }}">Réserver</a></strong></div>
         <p>{{ $show->description }}</p>
         <ul>
         @foreach($show->artistTypes as $artistType)
