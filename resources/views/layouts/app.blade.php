@@ -9,6 +9,7 @@
 
         <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
 		<noscript><link rel="stylesheet" href="{{ asset('assets/css/noscript.css') }}" /></noscript>
+        @yield('head')
     </head>
     <body class="is-preload">
     <!-- Wrapper -->
@@ -18,7 +19,7 @@
                 <div class="inner">
                     <!-- Logo -->
                         <a href="index.html" class="logo">
-                            <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+                            <span class="symbol"><img src="{{ asset('images/logo.svg') }}" alt="" /></span><span class="title">Réservations</span>
                         </a>
 
                     <!-- Nav -->
